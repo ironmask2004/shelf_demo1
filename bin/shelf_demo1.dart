@@ -34,17 +34,17 @@ class Service {
     router.get('/counter/inc', (Request request) async {
       _counter ++;
       await Future.delayed(Duration(milliseconds: 100));
-      return Response.ok(_counter.toString());
+      return Response.ok(_counter.toString() + '\n' );
     });
     router.get('/counter/dec', (Request request) async {
       _counter --;
       await Future.delayed(Duration(milliseconds: 100));
-      return Response.ok(_counter.toString());
+      return Response.ok(_counter.toString() + '\n');
     });
     router.get('/counter/reset', (Request request) async {
       _counter =0 ;
       await Future.delayed(Duration(milliseconds: 100));
-      return Response.ok(_counter.toString());
+      return Response.ok(_counter.toString() + '\n');
     });
 
     // Other routers can be mounted...
